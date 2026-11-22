@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiny Wins</title>
+  <meta name="description" content="Tiny Wins - four small games: Chess, Catch Stars, Flower Memory and a picture Puzzle.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23e6648c'/%3E%3Cpath d='M50 16l10 22 24 3-18 16 5 24-21-12-21 12 5-24-18-16 24-3z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="frame">
+
+  <!-- ===== SIGN IN ===== -->
+  <section id="login" class="screen active">
+    <h1>Tiny Wins</h1>
+    <p class="tagline">Who is playing?</p>
+    <div id="login-root"></div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section id="menu" class="screen">
+    <h1>Tiny Wins</h1>
+    <p class="tagline">Pick a game and play</p>
+    <div class="player-bar" id="player-bar"></div>
+
+    <div class="menu-grid">
+      <button class="game-btn" data-game="chess">
+        <b>Chess</b><span>Two players, full rules</span>
+      </button>
+      <button class="game-btn" data-game="catchstars">
+        <b>Catch Stars</b><span>Help Boo catch the stars</span>
+      </button>
+      <button class="game-btn" data-game="flowers">
+        <b>Flower Memory</b><span>Flip cards, match flowers</span>
+      </button>
+      <button class="game-btn" data-game="puzzle">
+        <b>Puzzle</b><span>Slide the tiles to finish it</span>
+      </button>
+      <button class="game-btn wide" data-game="scores">
+        <b>Scoreboard</b><span>See who is winning</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== GAME SCREENS (each game fills its own "root" box) ===== -->
+  <section id="chess" class="screen">
+    <div class="topbar"><button class="back" data-back>&larr; Menu</button><h2>Chess</h2><span class="spacer"></span></div>
+    <div id="chess-root"></div>
+  </section>
+
+  <section id="catchstars" class="screen">
+    <div class="topbar"><button class="back" data-back>&larr; Menu</button><h2>Catch Stars</h2><span class="spacer"></span></div>
+    <div id="catchstars-root"></div>
+  </section>
+
+  <section id="flowers" class="screen">
+    <div class="topbar"><button class="back" data-back>&larr; Menu</button><h2>Flower Memory</h2><span class="spacer"></span></div>
+    <div id="flowers-root"></div>
+  </section>
+
+  <section id="puzzle" class="screen">
+    <div class="topbar"><button class="back" data-back>&larr; Menu</button><h2>Puzzle</h2><span class="spacer"></span></div>
+    <div id="puzzle-root"></div>
+  </section>
+
+  <section id="scores" class="screen">
+    <div class="topbar"><button class="back" data-back>&larr; Menu</button><h2>Scoreboard</h2><span class="spacer"></span></div>
+    <div id="scores-root"></div>
+  </section>
+
+</main>
+
+<noscript><p style="text-align:center;color:#fff">Tiny Wins needs JavaScript turned on.</p></noscript>
+
+<script src="js/main.js"></script>
+<script src="js/players.js"></script>
+<script src="js/chess-engine.js"></script>
+<script src="js/chess.js"></script>
+<script src="js/catchstars.js"></script>
+<script src="js/flowermemory.js"></script>
+<script src="js/puzzle.js"></script>
+<script src="js/login.js"></script>
+<script src="js/start.js"></script>
+</body>
+</html>
